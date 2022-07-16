@@ -84,10 +84,13 @@ impl TaxCalculator {
     }
 
     fn calculate_tax(&self) -> f64 {
-        self.strategies
+        let unrounded_tax: f64 = self
+            .strategies
             .iter()
             .map(|strat| strat.apply(self.item.price))
-            .sum()
+            .sum();
+
+        (unrounded_tax * 20.).ceil() / 20.
     }
 }
 
@@ -117,8 +120,7 @@ impl TaxStrategy for BasicSalesTaxStrategy {
     }
 
     fn apply(&self, price: f64) -> f64 {
-        //TODO ROUND
-        (price * 0.1 *20.).ceil() /20.
+        price * 0.1
     }
 }
 
