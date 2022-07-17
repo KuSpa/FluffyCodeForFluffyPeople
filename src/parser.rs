@@ -1,5 +1,8 @@
 use regex::Regex;
-    use std::{fs::File, io::{BufRead, BufReader}};
+use std::{
+    fs::File,
+    io::{BufRead, BufReader},
+};
 
 pub struct Parser;
 impl Parser {
