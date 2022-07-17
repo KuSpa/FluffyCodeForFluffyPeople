@@ -53,3 +53,19 @@ impl From<TaxCalculator> for FinalItem {
         }
     }
 }
+
+// We already established that the conversion of line->Item->TaxCalculator->Tax is correct
+// Thus, we only add a small test that tests with a variety of items and don't test every scenario for itself
+#[test]
+fn it_should_calculate_the_correct_taxes() {
+    let items: Vec<Item> = vec![
+        Item::new("nothing but chocolate".to_owned(), 10.), // no tax,
+        Item::new("base tax".to_owned(), 100.),             // 10. tax
+        Item::new("base and import".to_owned(), 1000.),     //150. tax
+        Item::new("nothing pills and import".to_owned(), 10000.), // 500. tax
+    ];
+
+    let list = ShoppingList::from(items);
+    assert!(list.total_price == 11110.);
+    assert!(list.total_tax == 660.);
+}
