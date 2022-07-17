@@ -1,5 +1,5 @@
 # Overly Fancy Tax Calculator
-[![test](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml/badge.svg)](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml) [![build](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/build.yml/badge.svg)](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/build.yml)
+[![test](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml) [![build](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/build.yml/badge.svg)](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/build.yml)
 
 This is a small repo to solve the given coding challenge. 
 
