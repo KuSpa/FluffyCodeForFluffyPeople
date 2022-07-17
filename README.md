@@ -1,4 +1,5 @@
 # Overly Fancy Tax Calculator
+[![Rust](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml/badge.svg)](https://github.com/KuSpa/FluffyCodeForFluffyPeople/actions/workflows/rust.yml)
 
 This is a small repo to solve the given coding challenge. 
 
@@ -14,6 +15,6 @@ I decided against Java because I neither like its String operations and manageme
 I decided against Python because I like statically typed languages.
 Thus, I chose with ~~modern C++~~ Rust :).
 
+### Additional Thoughts
 
-
-* I chose Rust, because it's a beautiful language. Alternatives would have been Python
+* Float is not a good choice to represent decimal numbers. They get imprecise very quickly. A better choice would have been something like [bigdecimal](https://crates.io/crates/bigdecimal) which I found impractical to use. For production ready code I would either spend more time researching or write it myself.
