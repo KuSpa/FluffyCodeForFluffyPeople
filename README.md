@@ -8,26 +8,28 @@ If you want to compile the code yourself, please install rust using[ this guide]
 
 The program expects a file containing the shopping list as input. Example:
 
-```
+```bash
+# execute the artifact
 ./itemis testFiles/1
+# build and run
+cargo run testFiles/1
 ```
 
 
 ### Problem Selection
 I decided against the third problem as roman number parser are not interesting to implement.
-I decided against the second problem as it NP-hard (by reduction from subsetsum for a single track). Of course, the problem is still solvable especially with these input sizes, but still ;).
+I decided against the second problem as it is NP-hard (by reduction from subsetsum for a single track). Of course, the problem is still solvable especially with these input sizes, but still ;).
 So I took on the first Problem.
 
 ### Tech Stack Selection
-As this task is solvable (and was solved) in O(n), the performance of the language was not relevant for this decision. Mainstream solutions would have been Python for it's fast coding speed speed and Java, because some people decided once that it should be industry standard and never admitted their mistake. 
+As this task is solvable (and was solved) in O(n), the performance of the language was not relevant for this decision. Mainstream solutions would have been Python/JS/TS for their fast coding speed or Java, because some people decided once that it should be industry standard and never admitted their mistake and moved on. 
 
 I decided against Java because I neither like its String operations and management nor its Iterables mess. 
-I decided against Python because I like statically typed languages.
-Thus, I chose with ~~modern C++~~ Rust :).
+I decided against Python/.. because I like statically typed languages and wanted to code something in ~~the better C++~~ Rust again.
 
 ### CI/CD
 There is a number of unit tests, that need to run in order to merge into the main branch. Additionally, artifacts for every major os are build and added to the release automatically.
 
 ### Additional Thoughts
 
-* Float is not a good choice to represent decimal numbers. They get imprecise very quickly. A better choice would have been something like [bigdecimal](https://crates.io/crates/bigdecimal) which I found impractical to use. For production ready code I would either spend more time researching or write it myself.
+* Float is not a good choice to represent decimal numbers. They get imprecise very quickly. A better choice would have been something like Java's `BigDecimal` but the [implementation](https://crates.io/crates/bigdecimal) for Rust that I found impractical to use. For production ready code I would either spend more time researching or write it myself.
